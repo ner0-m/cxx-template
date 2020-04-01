@@ -1,7 +1,6 @@
-#
-# Heavily influenced by/Taken from https://github.com/StableCoder/cmake-script
-# Thanks and credits to it!
-#
+# Code heavily influenced by https://github.com/StableCoder/cmake-scripts/
+#   original copyright by George Cave - gcave@stablecoder.ca
+#   original license Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
 
 #
 # clang-format
