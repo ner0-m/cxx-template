@@ -21,7 +21,7 @@ BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeBraces: Linux
 BreakBeforeTernaryOperators: 'true'
 BreakConstructorInitializers: BeforeColon
-ColumnLimit: '140'
+ColumnLimit: '120'
 CompactNamespaces: 'true'
 ConstructorInitializerAllOnOneLineOrOnePerLine: 'true'
 Cpp11BracedListStyle: 'true'
@@ -36,7 +36,7 @@ IndentWrappedFunctionNames: 'true'
 JavaScriptQuotes: Leave
 KeepEmptyLinesAtTheStartOfBlocks: 'true'
 Language: Cpp
-NamespaceIndentation: All
+NamespaceIndentation: 'Inner'
 PointerAlignment: Left
 ReflowComments: 'true'
 SortIncludes: 'false'
