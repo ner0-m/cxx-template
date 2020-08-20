@@ -53,7 +53,7 @@ html_theme = 'sphinx_rtd_theme'
 
 # breathe configuration
 breathe_projects = {
-    'cxxtemplate':'/home/david/projects/cxx-template/build/docs/xml/',
+    'cxxtemplate':'/home/david/projects/cxx-template/build-cov/docs/xml/',
     }
 
 breathe_default_project = 'cxxtemplate'
