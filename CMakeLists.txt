@@ -13,8 +13,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
 # ---- C++ Standards ----
 #
-# Import macros to specify the C++ standard version and at the same time turning
-# of compiler specific extensions
+# Import macros to specify the C++ standard version and at the same time turning of compiler specific extensions
 #
 # Defined macros:
 #
@@ -28,8 +27,7 @@ include(cxx-standard)
 
 # ---- Sanitizers ----
 #
-# Turn on the specified Sanitizers if USE_SANITIZER is specified with a valid
-# variable
+# Turn on the specified Sanitizers if USE_SANITIZER is specified with a valid variable
 #
 # Possible declarations:
 #
@@ -47,8 +45,7 @@ include(sanitizers)
 
 # ---- Code Coverage ----
 #
-# see https://github.com/StableCoder/cmake-scripts#code-coverage-code-
-# coveragecmake
+# see https://github.com/StableCoder/cmake-scripts#code-coverage-code- coveragecmake
 #
 # ---- Code Coverage ----
 include(code-coverage)
@@ -84,29 +81,29 @@ clang_tidy()
 include(formatting)
 
 file(
-  GLOB_RECURSE
-  CMAKE_FILES
-  ${PROJECT_SOURCE_DIR}/cmake/*.cmake
-  ${PROJECT_SOURCE_DIR}/library/CMakeLists.txt
-  ${PROJECT_SOURCE_DIR}/test/CMakeLists.txt
-  ${PROJECT_SOURCE_DIR}/examples/CMakeLists.txt
-  CMakeLists.txt)
+    GLOB_RECURSE
+    CMAKE_FILES
+    ${PROJECT_SOURCE_DIR}/cmake/*.cmake
+    ${PROJECT_SOURCE_DIR}/library/CMakeLists.txt
+    ${PROJECT_SOURCE_DIR}/test/CMakeLists.txt
+    ${PROJECT_SOURCE_DIR}/examples/CMakeLists.txt
+    CMakeLists.txt)
 
 cmake_format(format-cmake ${CMAKE_FILES})
 
 file(
-  GLOB_RECURSE
-  ALL_CODE_FILES
-  ${PROJECT_SOURCE_DIR}/library/*.[ch]pp
-  ${PROJECT_SOURCE_DIR}/library/*.[ch]
-  ${PROJECT_SOURCE_DIR}/library/src/*.[ch]pp
-  ${PROJECT_SOURCE_DIR}/library/src/*.[ch]
-  ${PROJECT_SOURCE_DIR}/library/include/*.[h]pp
-  ${PROJECT_SOURCE_DIR}/library/include/*.[h]
-  ${PROJECT_SOURCE_DIR}/examples/*.[ch]pp
-  ${PROJECT_SOURCE_DIR}/examples/*.[ch]
-  ${PROJECT_SOURCE_DIR}/test/*.[ch]pp
-  ${PROJECT_SOURCE_DIR}/test/*.[ch])
+    GLOB_RECURSE
+    ALL_CODE_FILES
+    ${PROJECT_SOURCE_DIR}/library/*.[ch]pp
+    ${PROJECT_SOURCE_DIR}/library/*.[ch]
+    ${PROJECT_SOURCE_DIR}/library/src/*.[ch]pp
+    ${PROJECT_SOURCE_DIR}/library/src/*.[ch]
+    ${PROJECT_SOURCE_DIR}/library/include/*.[h]pp
+    ${PROJECT_SOURCE_DIR}/library/include/*.[h]
+    ${PROJECT_SOURCE_DIR}/examples/*.[ch]pp
+    ${PROJECT_SOURCE_DIR}/examples/*.[ch]
+    ${PROJECT_SOURCE_DIR}/test/*.[ch]pp
+    ${PROJECT_SOURCE_DIR}/test/*.[ch])
 
 clang_format(format-cxx ${ALL_CODE_FILES})
 
